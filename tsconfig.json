@@ -18,7 +18,12 @@
       "es6",
       "es7",
       "dom"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "react": ["node_modules/preact-compat/dist/preact-compat.js"],
+      "react-dom": ["node_modules/preact-compat/dist/preact-compat.js"]
+    }
   },
   "exclude": [
     "dist",

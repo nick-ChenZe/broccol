@@ -21,7 +21,11 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx'],
     // Fix webpack's default behavior to not load packages with jsnext:main module
     // https://github.com/Microsoft/TypeScript/issues/11677
-    mainFields: ['browser', 'main']
+    mainFields: ['browser', 'main'],
+    alias: {
+      'react': 'preact-compat/dist/preact-compat.js',
+      'react-dom': 'preact-compat/dist/preact-compat.js'
+    }
   },
   module: {
     loaders: [
