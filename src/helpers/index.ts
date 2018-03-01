@@ -15,7 +15,7 @@ function fetch(url: string, params?: object): Promise<any> {
   return new Promise((resolve, reject) => {
     nano.ajax({ url, method, body }, (code, responseText) => {
       if (code === 200) {
-        resolve(responseText);
+        resolve(JSON.parse(responseText));
       } else {
         reject({ code, responseText });
       }
